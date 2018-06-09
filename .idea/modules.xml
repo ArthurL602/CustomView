@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/lockpatternview/lockpatternview.iml" filepath="$PROJECT_DIR$/lockpatternview/lockpatternview.iml" />
       <module fileurl="file://$PROJECT_DIR$/passworddialog/passworddialog.iml" filepath="$PROJECT_DIR$/passworddialog/passworddialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/qqslidingmenu/qqslidingmenu.iml" filepath="$PROJECT_DIR$/qqslidingmenu/qqslidingmenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qqstepview/qqstepview.iml" filepath="$PROJECT_DIR$/qqstepview/qqstepview.iml" />
     </modules>
   </component>
 </project>

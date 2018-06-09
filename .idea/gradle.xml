@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/lockpatternview" />
             <option value="$PROJECT_DIR$/passworddialog" />
             <option value="$PROJECT_DIR$/qqslidingmenu" />
+            <option value="$PROJECT_DIR$/qqstepview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
