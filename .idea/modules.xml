@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/indexbaritemdecoration/indexbaritemdecoration.iml" filepath="$PROJECT_DIR$/indexbaritemdecoration/indexbaritemdecoration.iml" />
       <module fileurl="file://$PROJECT_DIR$/kgslidingmenu/kgslidingmenu.iml" filepath="$PROJECT_DIR$/kgslidingmenu/kgslidingmenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/listdatamenuview/listdatamenuview.iml" filepath="$PROJECT_DIR$/listdatamenuview/listdatamenuview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loadingview/loadingview.iml" filepath="$PROJECT_DIR$/loadingview/loadingview.iml" />
     </modules>
   </component>
 </project>

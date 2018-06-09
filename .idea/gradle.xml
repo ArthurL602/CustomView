@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/indexbaritemdecoration" />
             <option value="$PROJECT_DIR$/kgslidingmenu" />
             <option value="$PROJECT_DIR$/listdatamenuview" />
+            <option value="$PROJECT_DIR$/loadingview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
