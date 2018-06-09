@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/slidedellayout/slidedellayout.iml" filepath="$PROJECT_DIR$/slidedellayout/slidedellayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/superedittext/superedittext.iml" filepath="$PROJECT_DIR$/superedittext/superedittext.iml" />
       <module fileurl="file://$PROJECT_DIR$/systemprogressbar/systemprogressbar.iml" filepath="$PROJECT_DIR$/systemprogressbar/systemprogressbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/taglayout/taglayout.iml" filepath="$PROJECT_DIR$/taglayout/taglayout.iml" />
     </modules>
   </component>
 </project>

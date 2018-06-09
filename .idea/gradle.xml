@@ -23,6 +23,7 @@
             <option value="$PROJECT_DIR$/slidedellayout" />
             <option value="$PROJECT_DIR$/superedittext" />
             <option value="$PROJECT_DIR$/systemprogressbar" />
+            <option value="$PROJECT_DIR$/taglayout" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
