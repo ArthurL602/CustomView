@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/listdatamenuview" />
             <option value="$PROJECT_DIR$/loadingview" />
             <option value="$PROJECT_DIR$/lockpatternview" />
+            <option value="$PROJECT_DIR$/passworddialog" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
