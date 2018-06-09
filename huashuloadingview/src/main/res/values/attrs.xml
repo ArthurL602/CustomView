@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingView">
+        <!--圆的半径-->
+        <attr name="circleRadius" format="dimension"/>
+        <!--左圆颜色-->
+        <attr name="leftCircleColor" format="color"/>
+        <!--中间圆颜色-->
+        <attr name="middleCircleColor" format="color"/>
+        <!--右圆颜色-->
+        <attr name="rightCircleColor" format="color"/>
+        <!--移动距离-->
+        <attr name="translation" format="dimension"/>
+        <attr name="animDuration" format="integer"/>
+    </declare-styleable>
+</resources>
