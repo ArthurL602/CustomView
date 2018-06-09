@@ -1,1 +1,1 @@
-include ':app', ':colortrackview', ':dragbubble', ':indexbaritemdecoration', ':kgslidingmenu'
+include ':app', ':colortrackview', ':dragbubble', ':indexbaritemdecoration', ':kgslidingmenu', ':listdatamenuview'

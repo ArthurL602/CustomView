@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/dragbubble" />
             <option value="$PROJECT_DIR$/indexbaritemdecoration" />
             <option value="$PROJECT_DIR$/kgslidingmenu" />
+            <option value="$PROJECT_DIR$/listdatamenuview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
