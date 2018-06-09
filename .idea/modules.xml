@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/qqstepview/qqstepview.iml" filepath="$PROJECT_DIR$/qqstepview/qqstepview.iml" />
       <module fileurl="file://$PROJECT_DIR$/ratingbar/ratingbar.iml" filepath="$PROJECT_DIR$/ratingbar/ratingbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/slidedellayout/slidedellayout.iml" filepath="$PROJECT_DIR$/slidedellayout/slidedellayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/superedittext/superedittext.iml" filepath="$PROJECT_DIR$/superedittext/superedittext.iml" />
     </modules>
   </component>
 </project>
