@@ -13,9 +13,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import com.meloon.passworddialog.R;
-import com.meloon.passworddialog.adapter.Holder;
-import com.meloon.passworddialog.adapter.SimpleAdapter;
+
+import com.ljb.passworddialog.R;
+import com.ljb.passworddialog.adapter.Holder;
+import com.ljb.passworddialog.adapter.SimpleAdapter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
