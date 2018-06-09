@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/kgslidingmenu/kgslidingmenu.iml" filepath="$PROJECT_DIR$/kgslidingmenu/kgslidingmenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/listdatamenuview/listdatamenuview.iml" filepath="$PROJECT_DIR$/listdatamenuview/listdatamenuview.iml" />
       <module fileurl="file://$PROJECT_DIR$/loadingview/loadingview.iml" filepath="$PROJECT_DIR$/loadingview/loadingview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lockpatternview/lockpatternview.iml" filepath="$PROJECT_DIR$/lockpatternview/lockpatternview.iml" />
     </modules>
   </component>
 </project>

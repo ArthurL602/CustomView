@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LockPatternView">
+        <attr name="out_normal_color" format="color|reference"/>
+        <attr name="inner_normal_color" format="color|reference"/>
+        <attr name="out_pressed_color" format="color|reference"/>
+        <attr name="inner_pressed_color" format="color|reference"/>
+        <attr name="out_error_color" format="color|reference"/>
+        <attr name="inner_error_color" format="color|reference"/>
+        <attr name="dotRadius" format="reference|dimension"/>
+        <attr name="defaultLock" format="string|reference"/>
+        <attr name="use_out_dot" format="boolean|reference"/>
+    </declare-styleable>
+</resources>

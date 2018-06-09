@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/kgslidingmenu" />
             <option value="$PROJECT_DIR$/listdatamenuview" />
             <option value="$PROJECT_DIR$/loadingview" />
+            <option value="$PROJECT_DIR$/lockpatternview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
