@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/passworddialog" />
             <option value="$PROJECT_DIR$/qqslidingmenu" />
             <option value="$PROJECT_DIR$/qqstepview" />
+            <option value="$PROJECT_DIR$/ratingbar" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

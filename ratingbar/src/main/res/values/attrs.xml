@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RatingBar">
+        <!--非选中的图形id-->
+        <attr name="starNormal" format="reference"/>
+        <!--选中的图形id-->
+        <attr name="starFocus" format="reference"/>
+        <!--图形数量-->
+        <attr name="startNums" format="integer"/>
+        <!--focus图形数量-->
+        <attr name="focusNums" format="integer"/>
+        <!--图形之间的间隔-->
+        <attr name="starPadding" format="dimension"/>
+    </declare-styleable>
+</resources>
