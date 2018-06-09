@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/colortrackview/colortrackview.iml" filepath="$PROJECT_DIR$/colortrackview/colortrackview.iml" />
       <module fileurl="file://$PROJECT_DIR$/dragbubble/dragbubble.iml" filepath="$PROJECT_DIR$/dragbubble/dragbubble.iml" />
+      <module fileurl="file://$PROJECT_DIR$/indexbaritemdecoration/indexbaritemdecoration.iml" filepath="$PROJECT_DIR$/indexbaritemdecoration/indexbaritemdecoration.iml" />
     </modules>
   </component>
 </project>

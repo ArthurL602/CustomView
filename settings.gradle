@@ -1,1 +1,1 @@
-include ':app', ':colortrackview', ':dragbubble'
+include ':app', ':colortrackview', ':dragbubble', ':indexbaritemdecoration'
