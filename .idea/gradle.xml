@@ -20,6 +20,7 @@
             <option value="$PROJECT_DIR$/qqslidingmenu" />
             <option value="$PROJECT_DIR$/qqstepview" />
             <option value="$PROJECT_DIR$/ratingbar" />
+            <option value="$PROJECT_DIR$/slidedellayout" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
