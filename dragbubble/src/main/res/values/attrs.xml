@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DragBubble">
+        <attr name="dragCircleRadius" format="dimension|reference|integer"/>
+        <attr name="dragCircleColor" format="color|reference"/>
+        <attr name="text" format="string|reference"/>
+        <attr name="textSize" format="reference|dimension|integer"/>
+        <attr name="textColor" format="reference|color"/>
+    </declare-styleable>
+</resources>
