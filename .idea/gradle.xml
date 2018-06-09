@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/colortrackview" />
             <option value="$PROJECT_DIR$/dragbubble" />
             <option value="$PROJECT_DIR$/indexbaritemdecoration" />
+            <option value="$PROJECT_DIR$/kgslidingmenu" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
