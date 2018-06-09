@@ -22,7 +22,7 @@ import java.util.List;
  * Date        :2018/6/6
  * Description : 多筛选自定义View
  */
-public class ListDataScreenView extends LinearLayout  {
+public class ListDataScreenView extends LinearLayout {
     /*tab*/
     private LinearLayout mMenuTabLayout;
     private Context mContext;
@@ -34,7 +34,7 @@ public class ListDataScreenView extends LinearLayout  {
     private BaseMenuAdapter mAdapter;
     private int mCurrentPosition = -1;
 
-    public static  int DURATION = 350;
+    public static int DURATION = 350;
     /*动画是否执行*/
     private boolean mAnimatorIsExecute;
     /*存储菜单的高度*/
@@ -44,6 +44,8 @@ public class ListDataScreenView extends LinearLayout  {
     /*菜单View集合*/
     private List<View> mMenuViews;
     private boolean mOpenAnimation;
+
+    private MenuObserver mObserver;
 
     public ListDataScreenView(Context context) {
         this(context, null);
@@ -55,11 +57,11 @@ public class ListDataScreenView extends LinearLayout  {
 
     public ListDataScreenView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        obtainAttrs(context,attrs);
+        obtainAttrs(context, attrs);
         init(context);
         initLayout();
-        if(!mOpenAnimation){
-            DURATION=0;
+        if (!mOpenAnimation) {
+            DURATION = 0;
         }
     }
 
@@ -124,9 +126,15 @@ public class ListDataScreenView extends LinearLayout  {
         if (mContentView == null) {
             throw new RuntimeException("请绑定内容布局");
         }
+        if (mAdapter != null) {
+            mAdapter.unregisterDataSetObserver();
+        }
+        mAdapter = adapter;
+        mObserver= new AdapterMenuObserver();
+        mAdapter.registerDataSetObserver(mObserver);
         mMenuHeights.clear();
         mMenuViews.clear();
-        mAdapter = adapter;
+
         int count = mAdapter.getCount();
         mContentView.removeView(mShadowView);
         mContentView.addView(mShadowView);
@@ -229,7 +237,7 @@ public class ListDataScreenView extends LinearLayout  {
      */
     private void closeMenu() {
         // 经测试 乱点的情况下可能导致mCurrentPosition==-1
-        if (mAnimatorIsExecute || mCurrentPosition==-1) return;
+        if (mAnimatorIsExecute || mCurrentPosition == -1) return;
         final View menuView = mMenuViews.get(mCurrentPosition);
         // 1. 开启动画，位移动画， 透明度动画
         ObjectAnimator translationAnimator = ObjectAnimator.ofFloat(menuView, "translationY", 0, -menuView
@@ -256,6 +264,17 @@ public class ListDataScreenView extends LinearLayout  {
             }
         });
         alphaAnimator.start();
+    }
+
+    /**
+     * 具体的观察者
+     */
+    private class AdapterMenuObserver extends MenuObserver {
+
+        @Override
+        public void closeMenu() {
+            ListDataScreenView.this.closeMenu();
+        }
     }
 
 }

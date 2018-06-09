@@ -9,6 +9,8 @@ import android.view.ViewGroup;
  * Description : 筛选菜单的adapter
  */
 public abstract class BaseMenuAdapter {
+    private MenuObserver mMenuObserver ;
+
     /*获得有多少个菜单*/
     public abstract int getCount();
 
@@ -34,5 +36,19 @@ public abstract class BaseMenuAdapter {
      */
     public void menuClose(View tabView) {
 
+    }
+
+    public void registerDataSetObserver(MenuObserver observer) {
+        mMenuObserver=observer;
+    }
+
+    public void unregisterDataSetObserver() {
+        mMenuObserver = null;
+    }
+
+    public void closeMenu(){
+        if(mMenuObserver!=null){
+            mMenuObserver.closeMenu();
+        }
     }
 }
