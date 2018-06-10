@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.view.animation.AnticipateInterpolator;
 import android.view.animation.LinearInterpolator;
 
-import com.ljb.loadingview.R;
+
 
 /**
  * Author      :ljb
