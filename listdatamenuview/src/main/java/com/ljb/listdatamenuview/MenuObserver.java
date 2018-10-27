@@ -7,6 +7,7 @@ package com.ljb.listdatamenuview;
  */
 public abstract class MenuObserver {
 
+
     public abstract void closeMenu();
 
 }
