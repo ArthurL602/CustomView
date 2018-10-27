@@ -7,6 +7,7 @@ package com.ljb.indexbaritemdecoration.entity;
  */
 
 public class TitleBean {
+
     private String  tag;
 
     public String getTag() {
