@@ -99,6 +99,7 @@ public class DragBubble extends View {
      * @param defaultText
      */
     public void setDefaultText(String defaultText) {
+
         mDefaultText = defaultText;
         invalidate();
     }
