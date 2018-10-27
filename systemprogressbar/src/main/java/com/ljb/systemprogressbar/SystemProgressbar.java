@@ -22,6 +22,7 @@ import android.view.animation.LinearInterpolator;
  */
 
 public class SystemProgressbar extends View {
+
     //原路径
     private Path mSrcPath;
     //目标路径
