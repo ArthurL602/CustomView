@@ -29,6 +29,7 @@
             <option value="$PROJECT_DIR$/systemprogressbar" />
             <option value="$PROJECT_DIR$/taglayout" />
             <option value="$PROJECT_DIR$/verticaldraglayout" />
+            <option value="$PROJECT_DIR$/viewpagerindicator" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
