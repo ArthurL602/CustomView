@@ -18,6 +18,7 @@ import java.util.List;
  * Description : 视察动画的ViewPager
  */
 public class ParallaxViewpager extends ViewPager {
+
     private List<ParallaxFragment> mFragments;
 
     public ParallaxViewpager(Context context) {
