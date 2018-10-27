@@ -126,6 +126,7 @@ public class SplashView extends View {
         public abstract void draw(Canvas canvas);
     }
 
+
     /**
      * 旋转动画
      */
