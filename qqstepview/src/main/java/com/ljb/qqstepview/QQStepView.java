@@ -20,6 +20,7 @@ import android.view.animation.Interpolator;
  */
 
 public class QQStepView extends View {
+
     //颜色
     private int mOuterColor = Color.BLUE;
     private int mInnerColor = Color.RED;
