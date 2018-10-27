@@ -19,6 +19,7 @@ import android.view.animation.OvershootInterpolator;
  * Description : 自定义侧滑删除View
  */
 public class SimpleSlideDelView extends ViewGroup {
+
     /*侧滑菜单宽度总和(最大滑动距离)*/
     private int mMenuWidth;
 
