@@ -14,6 +14,7 @@ public class SuperEditText extends android.support.v7.widget.AppCompatEditText {
     public static final int PHONE_NUM = 0X000002;
     private int mCurrentCode = PHONE_NUM;
 
+
     public SuperEditText(Context context) {
         super(context);
     }
