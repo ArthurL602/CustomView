@@ -28,7 +28,7 @@ public class ListDataScreenView extends LinearLayout {
     private Context mContext;
     /*阴影View*/
     private View mShadowView;
-    private int mShadowColor = Color.parseColor("#88888888");
+    private int mShadowColor = Color.parseColor("#FF888888");
 
     /*菜单Adapter*/
     private BaseMenuAdapter mAdapter;
@@ -130,7 +130,7 @@ public class ListDataScreenView extends LinearLayout {
             mAdapter.unregisterDataSetObserver();
         }
         mAdapter = adapter;
-        mObserver= new AdapterMenuObserver();
+        mObserver = new AdapterMenuObserver();
         mAdapter.registerDataSetObserver(mObserver);
         mMenuHeights.clear();
         mMenuViews.clear();
@@ -140,11 +140,8 @@ public class ListDataScreenView extends LinearLayout {
         mContentView.addView(mShadowView);
         for (int i = 0; i < count; i++) {
             // 获取菜单 tab
-            View tabView = mAdapter.getView(i, mMenuTabLayout);
-            LayoutParams layoutParams = (LayoutParams) tabView.getLayoutParams();
-            layoutParams.weight = 1;
+            View tabView = mAdapter.addTabView(i, mMenuTabLayout);
             setTabClick(tabView, i);
-            mMenuTabLayout.addView(tabView);
             // 获取菜单的内容
             final View menuView = mAdapter.getMenuView(i, mContentView);
             menuView.setClickable(true);
@@ -183,12 +180,12 @@ public class ListDataScreenView extends LinearLayout {
                         int height = mMenuHeights.get(mCurrentPosition);
                         currentMenu.setVisibility(View.GONE);//隐藏当前菜单View
                         currentMenu.setTranslationY(-height); // 收回
-                        mAdapter.menuClose(mMenuTabLayout.getChildAt(mCurrentPosition));
+                        mAdapter.menuClose(mMenuTabLayout.getChildAt(mCurrentPosition), mCurrentPosition);
                         mCurrentPosition = position; //mCurrentPosition重新赋值当前的position
                         currentMenu = mMenuViews.get(mCurrentPosition);
                         currentMenu.setVisibility(View.VISIBLE); // 显示tab对应的菜单View
                         currentMenu.setTranslationY(0); //展示
-                        mAdapter.menuOpen(mMenuTabLayout.getChildAt(mCurrentPosition));
+                        mAdapter.menuOpen(mMenuTabLayout.getChildAt(mCurrentPosition), mCurrentPosition);
                     }
                 }
             }
@@ -206,8 +203,10 @@ public class ListDataScreenView extends LinearLayout {
         if (mAnimatorIsExecute) return;
         View menuView = mMenuViews.get(position);
         menuView.setVisibility(View.VISIBLE);
-        ObjectAnimator translationAnimator = ObjectAnimator.ofFloat(menuView, "translationY", -mMenuHeights.get
-                (position), 0);
+//        ObjectAnimator translationAnimator = ObjectAnimator.ofFloat(menuView, "translationY", -mMenuHeights.get
+//                (position), 0);
+        ObjectAnimator translationAnimator = ObjectAnimator.ofFloat(menuView, "translationY", -menuView
+                .getMeasuredHeight(), 0);
         translationAnimator.setDuration(DURATION);
         translationAnimator.addListener(new AnimatorListenerAdapter() {
             @Override
@@ -220,7 +219,7 @@ public class ListDataScreenView extends LinearLayout {
             public void onAnimationStart(Animator animation) {
                 mAnimatorIsExecute = true;
                 // 当前tab传递到外面
-                mAdapter.menuOpen(tabView);
+                mAdapter.menuOpen(tabView, position);
             }
         });
         translationAnimator.start();
@@ -233,6 +232,14 @@ public class ListDataScreenView extends LinearLayout {
     }
 
     /**
+     * 是否关闭了菜单
+     * @return
+     */
+    public boolean isCloseMenu() {
+        return mCurrentPosition == -1 ? true : false;
+    }
+
+    /**
      * 关闭菜单
      */
     private void closeMenu() {
@@ -240,6 +247,9 @@ public class ListDataScreenView extends LinearLayout {
         if (mAnimatorIsExecute || mCurrentPosition == -1) return;
         final View menuView = mMenuViews.get(mCurrentPosition);
         // 1. 开启动画，位移动画， 透明度动画
+//        ObjectAnimator translationAnimator = ObjectAnimator.ofFloat(menuView, "translationY", 0, -mMenuHeights.get
+// (mCurrentPosition)
+//                .getMeasuredHeight());
         ObjectAnimator translationAnimator = ObjectAnimator.ofFloat(menuView, "translationY", 0, -menuView
                 .getMeasuredHeight());
         translationAnimator.setDuration(DURATION);
@@ -260,7 +270,7 @@ public class ListDataScreenView extends LinearLayout {
             @Override
             public void onAnimationStart(Animator animation) {
                 mAnimatorIsExecute = true;
-                mAdapter.menuClose(mMenuTabLayout.getChildAt(mCurrentPosition));
+                mAdapter.menuClose(mMenuTabLayout.getChildAt(mCurrentPosition), mCurrentPosition);
             }
         });
         alphaAnimator.start();

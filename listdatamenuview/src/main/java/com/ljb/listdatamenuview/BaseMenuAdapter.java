@@ -14,27 +14,27 @@ public abstract class BaseMenuAdapter {
     /*获得有多少个菜单*/
     public abstract int getCount();
 
-    /*获取菜单TabView*/
-    public abstract View getView(int position, ViewGroup parent);
+    /*添加菜单TabView*/
+    public abstract View addTabView(int position, ViewGroup parent);
 
     /*获取菜单内容*/
     public abstract View getMenuView(int position, ViewGroup parent);
 
     /**
-     * 菜单打开
-     *
-     * @param tabView
+     * 打开菜单
+     * @param tabView 菜单View
+     * @param openPosition 打开的position
      */
-    public void menuOpen(View tabView) {
+    public void menuOpen(View tabView,int openPosition) {
 
     }
 
     /**
-     * 菜单关闭
-     *
-     * @param tabView
+     *  关闭菜单
+     * @param tabView 菜单View
+     * @param closePosition 关闭的position
      */
-    public void menuClose(View tabView) {
+    public void menuClose(View tabView,int closePosition) {
 
     }
 
