@@ -51,6 +51,7 @@ public class LoadingView extends RelativeLayout {
             }
         });
 
+
     }
 
     private void obtainAttrs(Context context, AttributeSet attrs) {
