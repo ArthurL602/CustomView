@@ -44,6 +44,7 @@ public class ShapeView extends View {
         init();
     }
 
+
     private void init() {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     }
