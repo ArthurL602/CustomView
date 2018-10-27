@@ -19,6 +19,7 @@ import android.widget.FrameLayout;
  */
 
 public class VerticalDragLayout extends FrameLayout {
+
     /*ViewDragHelper对象*/
     private ViewDragHelper mViewDragHelper;
     /*拖拽的列表View*/
