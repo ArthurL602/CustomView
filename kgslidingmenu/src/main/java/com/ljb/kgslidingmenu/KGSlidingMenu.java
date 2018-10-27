@@ -35,11 +35,11 @@ public class KGSlidingMenu extends HorizontalScrollView {
     // 是否拦截onTouchEvent()里面的代码
     private boolean mIsInterceptTouchEvent=false;
 
-    public KgSlideView(Context context) {
+    public KGSlidingMenu(Context context) {
         this(context, null);
     }
 
-    public KgSlideView(Context context, AttributeSet attrs) {
+    public KGSlidingMenu(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
@@ -63,7 +63,7 @@ public class KGSlidingMenu extends HorizontalScrollView {
         }
     };
 
-    public KgSlideView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public KGSlidingMenu(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         // 获取自定义属性
         initAttr(context, attrs);
