@@ -24,6 +24,7 @@ import java.util.ArrayList;
  */
 
 public class LockPatternView extends View {
+
     private boolean mIsInit = false;
     //canvas 的宽高
     private int width;
