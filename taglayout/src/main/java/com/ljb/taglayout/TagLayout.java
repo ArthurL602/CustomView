@@ -14,6 +14,7 @@ import java.util.List;
  * Description : 自定义流式布局
  */
 public class TagLayout extends ViewGroup {
+
     // 集合套集合的方式存储不同行的View
     private List<List<View>> mChildViews = new ArrayList<>();
 
