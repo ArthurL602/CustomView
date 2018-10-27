@@ -20,6 +20,7 @@ import android.widget.RelativeLayout;
  * Description : 仿QQ侧滑菜单
  */
 public class QQSlidingMenu extends HorizontalScrollView {
+
     private float mMenuRightMargin;
     /*菜单宽度*/
     private int mMenuWidth;
