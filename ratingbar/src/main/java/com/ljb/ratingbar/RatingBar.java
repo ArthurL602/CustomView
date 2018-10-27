@@ -18,6 +18,7 @@ import android.view.View;
  */
 
 public class RatingBar extends View {
+
     private Bitmap mNormalBitmap, mFocusBitmap;
     // 图形数
     private int mStarNums = 5;
