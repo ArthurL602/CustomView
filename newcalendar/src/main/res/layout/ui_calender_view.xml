@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_calender_hear"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <Button
+            android:id="@+id/btn_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="前一页"
+            />
+
+        <TextView
+            android:id="@+id/tv_calender_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="2018"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="后一页"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calender_weak"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"/>
+
+    <GridView
+        android:id="@+id/gv_calender_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:listSelector="@null"
+        android:numColumns="7"/>
+</LinearLayout>
