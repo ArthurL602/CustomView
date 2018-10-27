@@ -15,7 +15,7 @@ import static com.ljb.colortrackview.view.ColorTrackView.Direction.LEFT_TO_RIGHT
 /**
  * Author      :ljb
  * Date        :2018/2/23
- * Description : 颜色轨迹自定义view
+ * Description : 颜色轨迹自定义view(玩转字体变色)
  */
 
 
@@ -68,6 +68,7 @@ public class ColorTrackView extends android.support.v7.widget.AppCompatTextView 
      * @param attrs
      */
     private void initPaint(Context context, AttributeSet attrs) {
+
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ColorTrackView);
         if (ta != null) {
             int originalColor = ta.getColor(R.styleable.ColorTrackView_originalColor, getTextColors().getDefaultColor
