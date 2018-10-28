@@ -168,6 +168,9 @@ public class ListDataScreenView extends LinearLayout {
         tabView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!mAdapter.tabClickEnable()) {
+                    return;
+                }
                 // 关闭状态下 mCurrentPosition==-1
                 if (mCurrentPosition == -1) { //打开
                     openMenu(tabView, position);

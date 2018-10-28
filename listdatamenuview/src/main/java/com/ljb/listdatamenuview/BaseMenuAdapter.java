@@ -19,7 +19,8 @@ public abstract class BaseMenuAdapter {
 
     /*获取菜单内容*/
     public abstract View getMenuView(int position, ViewGroup parent);
-
+    /*菜单是否能点击*/
+    public abstract boolean tabClickEnable();
     /**
      * 打开菜单
      * @param tabView 菜单View
