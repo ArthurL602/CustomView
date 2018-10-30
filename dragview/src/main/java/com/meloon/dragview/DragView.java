@@ -74,7 +74,6 @@ public class DragView extends View{
                 break;
             case MotionEvent.ACTION_UP:
                 RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(120,120);
-
                 float currX = getX()+getWidth()/2;
                 if (currX >= getScreenWidth() / 2) {
                     right = (int) getScreenWidth();
