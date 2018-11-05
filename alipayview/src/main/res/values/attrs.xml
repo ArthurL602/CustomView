@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AliPlayView">
+        <attr name="view_width" format="dimension|reference"/>
+        <attr name="view_height" format="dimension|reference"/>
+        <attr name="first_point_x_ratio" format="float|reference"/>
+        <attr name="first_point_y_ratio" format="float|reference"/>
+        <attr name="center_point_x_ratio" format="float|reference"/>
+        <attr name="center_point_y_ratio" format="float|reference"/>
+        <attr name="last_point_x_ratio" format="float|reference"/>
+        <attr name="last_point_y_ratio" format="float|reference"/>
+        <attr name="path_color" format="color|reference"/>
+        <attr name="pathWidth" format="dimension|reference"/>
+        <attr name="anim_duration" format="integer|reference"/>
+    </declare-styleable>
+</resources>
