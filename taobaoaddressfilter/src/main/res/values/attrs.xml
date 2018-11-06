@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaxHeightLinearLayout">
+        <attr name="maxHeightEnable" format="boolean|reference"/>
+        <attr name="maxHeiRatio" format="float|reference"/>
+    </declare-styleable>
+</resources>
