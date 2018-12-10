@@ -1,6 +1,8 @@
 package com.ljb.superedittext;
 
 import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.Log;
 
@@ -9,7 +11,7 @@ import android.util.Log;
  * Date        :2018/3/28
  * Description : 银行卡和手机号码格式自定义EditText
  */
-public class SuperEditText extends android.support.v7.widget.AppCompatEditText {
+public class SuperEditText extends android.support.v7.widget.AppCompatEditText implements TextWatcher {
     public static final int BANK_CARD = 0X000001;
     public static final int PHONE_NUM = 0X000002;
     private int mCurrentCode = PHONE_NUM;
@@ -25,7 +27,7 @@ public class SuperEditText extends android.support.v7.widget.AppCompatEditText {
 
     public SuperEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
+addTextChangedListener(this);
     }
 
     public void setCode(int code) {
@@ -35,12 +37,18 @@ public class SuperEditText extends android.support.v7.widget.AppCompatEditText {
 
     private int mLastLen;
 
+
     @Override
-    protected void onTextChanged(CharSequence text, int start, int lengthBefore, int lengthAfter) {
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+    @Override
+    public void onTextChanged(CharSequence text, int start, int lengthBefore, int lengthAfter) {
         super.onTextChanged(text, start, lengthBefore, lengthAfter);
         String data = text.toString();
         int length = data.length();
         boolean isAdd = (length - mLastLen) > 0;
+        mLastLen = length;
         switch (mCurrentCode) {
             case BANK_CARD:
                 setBankCard(data, length, isAdd);
@@ -49,7 +57,12 @@ public class SuperEditText extends android.support.v7.widget.AppCompatEditText {
                 setPhoneNum(data, length, isAdd);
                 break;
         }
-        mLastLen = length;
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+a(s);
     }
 
     /**
@@ -86,7 +99,29 @@ public class SuperEditText extends android.support.v7.widget.AppCompatEditText {
 
     }
 
-
+    /**
+     * 用于规范银行卡号
+     * @param s
+     */
+    private void a(Editable s){
+        String str = s.toString().trim().replace(" ", "");
+        String result = "";
+        if (str.length() >= 4) {
+           removeTextChangedListener(this);
+            for (int i = 0; i < str.length(); i++) {
+                result += str.charAt(i);
+                if ((i + 1) % 4 == 0) {
+                    result += " ";
+                }
+            }
+            if (result.endsWith(" ")) {
+                result = result.substring(0, result.length() - 1);
+            }
+            setText(result);
+           addTextChangedListener(this);
+            setSelection(getText().toString().length());//焦点到输入框最后位置
+        }
+    }
     /**
      * 银行卡格式
      *
