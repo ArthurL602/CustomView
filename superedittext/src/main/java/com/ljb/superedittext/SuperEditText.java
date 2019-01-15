@@ -27,7 +27,7 @@ public class SuperEditText extends android.support.v7.widget.AppCompatEditText i
 
     public SuperEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-addTextChangedListener(this);
+        addTextChangedListener(this);
     }
 
     public void setCode(int code) {
@@ -42,6 +42,7 @@ addTextChangedListener(this);
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
     }
+
     @Override
     public void onTextChanged(CharSequence text, int start, int lengthBefore, int lengthAfter) {
         super.onTextChanged(text, start, lengthBefore, lengthAfter);
@@ -58,11 +59,12 @@ addTextChangedListener(this);
                 break;
         }
 
+//        b(text,start,lengthBefore,lengthAfter);
     }
 
     @Override
     public void afterTextChanged(Editable s) {
-a(s);
+        a(s);
     }
 
     /**
@@ -79,18 +81,18 @@ a(s);
                 String sub2 = data.substring(length - 1, length);
                 setText(sub1 + " " + sub2);
                 setSelection(length + 1);
-            }else if(length==9){
+            } else if (length == 9) {
                 String sub1 = data.substring(0, length - 1);
                 String sub2 = data.substring(length - 1, length);
                 setText(sub1 + " " + sub2);
                 setSelection(length + 1);
             }
-        }else {
+        } else {
             if (length == 4) {
                 String sub = data.substring(0, length - 1);
                 setText(sub);
                 setSelection(length - 1);
-            }else if(length==9){
+            } else if (length == 9) {
                 String sub = data.substring(0, length - 1);
                 setText(sub);
                 setSelection(length - 1);
@@ -101,13 +103,14 @@ a(s);
 
     /**
      * 用于规范银行卡号
+     *
      * @param s
      */
-    private void a(Editable s){
+    private void a(Editable s) {
         String str = s.toString().trim().replace(" ", "");
         String result = "";
         if (str.length() >= 4) {
-           removeTextChangedListener(this);
+            removeTextChangedListener(this);
             for (int i = 0; i < str.length(); i++) {
                 result += str.charAt(i);
                 if ((i + 1) % 4 == 0) {
@@ -118,10 +121,45 @@ a(s);
                 result = result.substring(0, result.length() - 1);
             }
             setText(result);
-           addTextChangedListener(this);
+            addTextChangedListener(this);
             setSelection(getText().toString().length());//焦点到输入框最后位置
         }
     }
+
+    private void b(CharSequence s, int start, int before, int count) {
+        if (s == null || s.length() == 0) return;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            if (i != 4 && i != 9 && i != 14 && i != 19 && s.charAt(i) == ' ') {
+                continue;
+            } else {
+                sb.append(s.charAt(i));
+                if ((sb.length() == 5 || sb.length() == 10 || sb.length() == 15 || sb.length() == 20) && sb.charAt(sb
+                        .length() - 1) != ' ') {
+                    sb.insert(sb.length() - 1, ' ');
+                }
+            }
+        }
+        if (!sb.toString().equals(s.toString())) {
+            int index = start + 1;
+            if (sb.charAt(start) == ' ') {
+                if (before == 0) {
+                    index++;
+                } else {
+                    index--;
+                }
+            } else {
+                if (before == 1) {
+                    index--;
+                }
+            }
+            synchronized (this) {
+                setText(sb.toString());
+                setSelection(index);
+            }
+        }
+    }
+
     /**
      * 银行卡格式
      *
