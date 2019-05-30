@@ -1,9 +1,11 @@
-package com.xiaoma.ljb.autoscrolltextview;
+package com.ljb.autoscrolltextview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
 /**
  * @Author: LiangJingBo.
@@ -11,7 +13,8 @@ import android.util.AttributeSet;
  * @Describe:
  */
 
-public class AutoTextView extends android.support.v7.widget.AppCompatTextView {
+@SuppressLint("AppCompatCustomView")
+public class AutoTextView extends  TextView {
     private Paint mPaint;
     private int mViewWidth;
     private String mText;
