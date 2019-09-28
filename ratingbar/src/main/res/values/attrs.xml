@@ -12,4 +12,13 @@
         <!--图形之间的间隔-->
         <attr name="starPadding" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="CStarView">
+        <attr name="starNum" format="integer"/>
+        <attr name="defaultStar" format="reference"/>
+        <attr name="selectedStar" format="reference"/>
+        <attr name="starPadding" format="dimension|reference"/>
+        <attr name="starWidth" format="dimension|reference"/>
+        <attr name="starHeight" format="reference|dimension"/>
+    </declare-styleable>
 </resources>
