@@ -3,4 +3,7 @@
     <declare-styleable name="KGSlidingMenu">
         <attr name="menuRightMargin" format="dimension"/>
     </declare-styleable>
+    <declare-styleable name="KGSlidingViewV2">
+        <attr name="menuRightMargin" format="dimension|reference"/>
+    </declare-styleable>
 </resources>
