@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="LetterSideBar">
+    <declare-styleable name="LetterSideBarV1">
         <attr name="LetterSizeBar_TextSize" format="dimension|reference|integer"/>
         <attr name="LatterSizeBar_SelectTextColor" format="color|reference"/>
         <attr name="LatterSizeBar_DefaultTextColor" format="color|reference"/>

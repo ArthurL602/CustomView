@@ -20,7 +20,7 @@ import android.view.View;
  * Description : 字母索引条
  */
 
-public class LetterSideBar extends View {
+public class LetterSideBarV1 extends View {
 
     private String[] mLetters = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q",
             "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#"};
@@ -45,15 +45,15 @@ public class LetterSideBar extends View {
         mTextChangeListener = textChangeListener;
     }
 
-    public LetterSideBar(Context context) {
+    public LetterSideBarV1(Context context) {
         this(context, null);
     }
 
-    public LetterSideBar(Context context, @Nullable AttributeSet attrs) {
+    public LetterSideBarV1(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public LetterSideBar(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public LetterSideBarV1(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initAttr(context, attrs);
         initPaint();
@@ -67,11 +67,11 @@ public class LetterSideBar extends View {
      * @param attrs
      */
     private void initAttr(Context context, AttributeSet attrs) {
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.LetterSideBar);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.LetterSideBarV1);
         if (ta != null) {
-            mTextSize = (int) ta.getDimension(R.styleable.LetterSideBar_LetterSizeBar_TextSize, mTextSize);
-            mSelectTextColor = ta.getColor(R.styleable.LetterSideBar_LatterSizeBar_SelectTextColor, mSelectTextColor);
-            mDefaultTextColor = ta.getColor(R.styleable.LetterSideBar_LatterSizeBar_DefaultTextColor,
+            mTextSize = (int) ta.getDimension(R.styleable.LetterSideBarV1_LetterSizeBar_TextSize, mTextSize);
+            mSelectTextColor = ta.getColor(R.styleable.LetterSideBarV1_LatterSizeBar_SelectTextColor, mSelectTextColor);
+            mDefaultTextColor = ta.getColor(R.styleable.LetterSideBarV1_LatterSizeBar_DefaultTextColor,
                     mDefaultTextColor);
             ta.recycle();
         }
