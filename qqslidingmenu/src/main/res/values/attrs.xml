@@ -3,4 +3,7 @@
     <declare-styleable name="KGSlidingMenu">
         <attr name="menuRightMargin" format="dimension"/>
     </declare-styleable>
+    <declare-styleable name="QQSlidingViewV2">
+        <attr name="qqMenuRightMargin" format="dimension|reference"/>
+    </declare-styleable>
 </resources>
