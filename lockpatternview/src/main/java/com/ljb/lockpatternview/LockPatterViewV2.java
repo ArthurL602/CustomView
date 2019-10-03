@@ -274,6 +274,7 @@ public class LockPatterViewV2 extends View {
         Point point;
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                if(mIsDownInCircle) return false;
                 mSelectedPoints.clear();
                 mIsDownInCircle = false;
                 point = calIsInnerCircle(mDownX, mDownY);
