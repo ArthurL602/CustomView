@@ -11,4 +11,14 @@
         <attr name="defaultLock" format="string|reference"/>
         <attr name="use_out_dot" format="boolean|reference"/>
     </declare-styleable>
+
+    <declare-styleable name="LockPatterViewV2">
+        <attr name="circleStrokeWidth" format="dimension|reference"/>
+        <attr name="normalColor" format="color"/>
+        <attr name="pressColor" format="color"/>
+        <attr name="errorColor" format="color"/>
+        <attr name="arrowAngle" format="integer"/>
+        <attr name="arrowHeight" format="dimension|reference"/>
+        <attr name="rate" format="integer"/>
+    </declare-styleable>
 </resources>
