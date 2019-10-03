@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <com.ljb.test.test_13.ShapeView
+        android:id="@+id/shape_loading_view"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="86dp"/>
+
+    <View
+        android:id="@+id/shadow_view"
+        android:layout_width="20dp"
+        android:layout_height="3dp"
+        android:background="@drawable/shape_bg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="玩命加载中..."
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>
