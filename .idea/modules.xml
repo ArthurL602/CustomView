@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/alipayview/alipayview.iml" filepath="$PROJECT_DIR$/alipayview/alipayview.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/autoscrolltextview/autoscrolltextview.iml" filepath="$PROJECT_DIR$/autoscrolltextview/autoscrolltextview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/autoscrolltextview/autoscrolltextview.iml" filepath="$PROJECT_DIR$/autoscrolltextview/autoscrolltextview.iml" />
       <module fileurl="file://$PROJECT_DIR$/colortrackview/colortrackview.iml" filepath="$PROJECT_DIR$/colortrackview/colortrackview.iml" />
       <module fileurl="file://$PROJECT_DIR$/dragbubble/dragbubble.iml" filepath="$PROJECT_DIR$/dragbubble/dragbubble.iml" />
       <module fileurl="file://$PROJECT_DIR$/dragview/dragview.iml" filepath="$PROJECT_DIR$/dragview/dragview.iml" />
@@ -16,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/listdatamenuview/listdatamenuview.iml" filepath="$PROJECT_DIR$/listdatamenuview/listdatamenuview.iml" />
       <module fileurl="file://$PROJECT_DIR$/loadingview/loadingview.iml" filepath="$PROJECT_DIR$/loadingview/loadingview.iml" />
       <module fileurl="file://$PROJECT_DIR$/lockpatternview/lockpatternview.iml" filepath="$PROJECT_DIR$/lockpatternview/lockpatternview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lovelayout/lovelayout.iml" filepath="$PROJECT_DIR$/lovelayout/lovelayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/maxheightlinearlayout/maxheightlinearlayout.iml" filepath="$PROJECT_DIR$/maxheightlinearlayout/maxheightlinearlayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/newcalendar/newcalendar.iml" filepath="$PROJECT_DIR$/newcalendar/newcalendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/parallaxviewpager/parallaxviewpager.iml" filepath="$PROJECT_DIR$/parallaxviewpager/parallaxviewpager.iml" />
