@@ -4,6 +4,6 @@
         <attr name="menuRightMargin" format="dimension"/>
     </declare-styleable>
     <declare-styleable name="KGSlidingViewV2">
-        <attr name="menuRightMargin" format="dimension|reference"/>
+        <attr name="menuRightMargin_v2" format="dimension|reference"/>
     </declare-styleable>
 </resources>

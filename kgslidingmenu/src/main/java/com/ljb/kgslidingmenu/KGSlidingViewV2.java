@@ -172,7 +172,7 @@ public class KGSlidingViewV2 extends HorizontalScrollView {
     private void initAttrs(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.KGSlidingViewV2);
         if (typedArray != null) {
-            mMenuRightMargin = typedArray.getDimensionPixelSize(R.styleable.KGSlidingViewV2_menuRightMargin, mMenuRightMargin);
+            mMenuRightMargin = typedArray.getDimensionPixelSize(R.styleable.KGSlidingViewV2_menuRightMargin_v2, mMenuRightMargin);
             typedArray.recycle();
         }
     }
