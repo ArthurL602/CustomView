@@ -7,4 +7,9 @@
         <attr name="textSize" format="reference|dimension|integer"/>
         <attr name="textColor" format="reference|color"/>
     </declare-styleable>
+
+    <declare-styleable name="MessageBubbleView">
+        <attr name="dragViewColor" format="color"/>
+        <attr name="dragViewRadius" format="dimension"/>
+    </declare-styleable>
 </resources>
