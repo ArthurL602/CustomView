@@ -13,4 +13,12 @@
         <attr name="translation" format="dimension"/>
         <attr name="animDuration" format="integer"/>
     </declare-styleable>
+
+    <declare-styleable name="LoadingView2">
+        <attr name="leftColor" format="color"/>
+        <attr name="middleColor" format="color"/>
+        <attr name="rightColor" format="color"/>
+        <attr name="translationDistance" format="dimension"/>
+        <attr name="circleRadius" format="dimension"/>
+    </declare-styleable>
 </resources>
