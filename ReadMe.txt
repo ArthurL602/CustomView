@@ -26,3 +26,4 @@
 26. taobaoaddressfilter: 仿淘宝地址选择
 27. verticalpagerindicator: 垂直拖拽控件（仿汽车之家）
 28. viewpagerindicator: 自定义viewpagerindicator
+29. redpackageview: 红包效果自定义view
