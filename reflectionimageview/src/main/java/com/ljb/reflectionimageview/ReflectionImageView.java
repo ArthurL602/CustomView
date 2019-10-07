@@ -77,7 +77,7 @@ public class ReflectionImageView extends AppCompatImageView {
             super.onDraw(canvas);
             canvas.restore();
             // 绘制倒影
-            drawReflection(canvas);
+            drawReflection2(canvas);
             // 绘制阴影
             drawShadow(canvas);
         }
@@ -105,11 +105,33 @@ public class ReflectionImageView extends AppCompatImageView {
     }
 
     private void drawReflection(Canvas canvas) {
+        if(getDrawable() == null) return;
         canvas.save();
-        canvas.scale(1f,-1f,0,getHeight());
-        canvas.translate(0, mReflectionHeigh);
+        float scale = mOriginalHeight / getHeight();
+
+        canvas.scale(1f,-1f,0,getHeight()  );
+        canvas.scale(1f, scale, getWidth() /2, 0);
+        canvas.translate(0, 2* mReflectionHeigh  * (getHeight() / mOriginalHeight) );
         Drawable drawable = getDrawable();
         drawable.draw(canvas);
+        canvas.restore();
+    }
+
+    /**
+     * 用这个好理解些
+     * @param canvas
+     */
+    private void drawReflection2(Canvas canvas) {
+        if(getDrawable() == null) return;
+        canvas.save();
+        float scale = mOriginalHeight / getHeight();
+
+        canvas.rotate(180,getWidth()/2,getHeight()/2);//180度旋转
+        canvas.scale(-1f, 1, getWidth()/2, 0);// 左右翻转
+        canvas.scale(1f, scale, getWidth() /2, 0);//缩放
+        canvas.translate(0, -(mOriginalHeight - mReflectionHeigh)*(getHeight()/mOriginalHeight));//平移到计算的位置
+        Drawable drawable = getDrawable();
+        drawable.draw(canvas);// 绘制
         canvas.restore();
     }
 
