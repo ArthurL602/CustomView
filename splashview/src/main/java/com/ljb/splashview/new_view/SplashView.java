@@ -7,6 +7,8 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.AnticipateInterpolator;
@@ -59,6 +61,7 @@ public class SplashView extends View {
             public void run() {
             }
         });
+        setLayerType(LAYER_TYPE_SOFTWARE,null);
     }
 
     private void init(Context context, AttributeSet attrs) {
@@ -220,6 +223,17 @@ public class SplashView extends View {
             mPaint.setStrokeWidth(strokeWidth);
             float radius = mSpreadRadius + strokeWidth / 2;
             canvas.drawCircle(mCenterX,mCenterY,radius,mPaint);
+//            drawFun2(canvas);
+        }
+
+        private void drawFun2(Canvas canvas) {
+            canvas.save();
+            canvas.drawColor(Color.WHITE);
+            mPaint.setColor(Color.TRANSPARENT);
+            mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+            canvas.drawCircle(mCenterX, mCenterY, mSpreadRadius, mPaint);
+            mPaint.setXfermode(null);
+            canvas.restore();
         }
     }
 
