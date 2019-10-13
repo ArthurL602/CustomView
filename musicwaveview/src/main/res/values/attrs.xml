@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="time_delay" format="integer"/>
+    <attr name="waveSize" format="integer"/>
+    <attr name="ceilPaddingRate" format="float"/>
+</resources>
