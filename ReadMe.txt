@@ -29,3 +29,4 @@
 29. redpackageview: 红包效果自定义view
 30. reflectionimageview: 自定义带有倒影效果的ImageView
 31. MusicWaveView：音乐律动自定义View
+32. CircleReflectionImageView：圆形倒影自定义View

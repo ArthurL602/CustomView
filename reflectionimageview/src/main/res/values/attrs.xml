@@ -4,4 +4,7 @@
         <attr name="originalScale" format="float"/>
         <attr name="reflectionScale" format="float"/>
     </declare-styleable>
+    <declare-styleable name="CircleReflectionImageView">
+        <attr name="centerPadding" format="dimension"/>
+    </declare-styleable>
 </resources>
